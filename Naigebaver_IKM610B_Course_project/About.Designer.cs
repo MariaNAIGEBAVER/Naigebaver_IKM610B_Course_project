@@ -33,6 +33,8 @@ namespace Naigebaver_IKM610B_Course_project
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tAbout = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -60,11 +62,24 @@ namespace Naigebaver_IKM610B_Course_project
             this.tAbout.Interval = 10000;
             this.tAbout.Tick += new System.EventHandler(this.tAbout_Tick);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(301, 270);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(180, 29);
+            this.progressBar1.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "About";
@@ -79,5 +94,7 @@ namespace Naigebaver_IKM610B_Course_project
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Timer tAbout;
+        private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.ProgressBar progressBar1;
     }
 }
