@@ -253,6 +253,7 @@ string disk = "";
             }
         }
 
+
         private void Peek_Click(object sender, EventArgs e)
         {
             if (MajorObject.myStack.Count > 0)
