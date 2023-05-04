@@ -49,6 +49,9 @@ namespace Naigebaver_IKM610B_Course_project
             this.пускToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.проНакопичувачіToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.текстовіФайлиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.зберегтиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.зберегтиЯкToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.довідкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sfdSave = new System.Windows.Forms.SaveFileDialog();
@@ -68,13 +71,15 @@ namespace Naigebaver_IKM610B_Course_project
             this.Peek = new System.Windows.Forms.Button();
             this.Pop = new System.Windows.Forms.Button();
             this.Push = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.Enqueue = new System.Windows.Forms.Button();
-            this.Dequeue = new System.Windows.Forms.Button();
-            this.Peek_q = new System.Windows.Forms.Button();
-            this.Queuetb = new System.Windows.Forms.TextBox();
-            this.Черга = new System.Windows.Forms.Label();
             this.LabelQueue = new System.Windows.Forms.Label();
+            this.Черга = new System.Windows.Forms.Label();
+            this.Queuetb = new System.Windows.Forms.TextBox();
+            this.Peek_q = new System.Windows.Forms.Button();
+            this.Dequeue = new System.Windows.Forms.Button();
+            this.Enqueue = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.відкритиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwOpen)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -208,7 +213,8 @@ namespace Naigebaver_IKM610B_Course_project
             this.роботаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.пускToolStripMenuItem,
             this.toolStripSeparator4,
-            this.проНакопичувачіToolStripMenuItem});
+            this.проНакопичувачіToolStripMenuItem,
+            this.текстовіФайлиToolStripMenuItem});
             this.роботаToolStripMenuItem.Name = "роботаToolStripMenuItem";
             this.роботаToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.роботаToolStripMenuItem.Text = "Робота";
@@ -217,21 +223,45 @@ namespace Naigebaver_IKM610B_Course_project
             // 
             this.пускToolStripMenuItem.Name = "пускToolStripMenuItem";
             this.пускToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F9;
-            this.пускToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.пускToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.пускToolStripMenuItem.Text = "Пуск";
             this.пускToolStripMenuItem.Click += new System.EventHandler(this.bStart_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(216, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
             // 
             // проНакопичувачіToolStripMenuItem
             // 
             this.проНакопичувачіToolStripMenuItem.Name = "проНакопичувачіToolStripMenuItem";
-            this.проНакопичувачіToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.проНакопичувачіToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.проНакопичувачіToolStripMenuItem.Text = "Про накопичувачі";
             this.проНакопичувачіToolStripMenuItem.Click += new System.EventHandler(this.проНакопичувачіToolStripMenuItem_Click);
+            // 
+            // текстовіФайлиToolStripMenuItem
+            // 
+            this.текстовіФайлиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.зберегтиToolStripMenuItem1,
+            this.зберегтиЯкToolStripMenuItem1,
+            this.відкритиToolStripMenuItem1});
+            this.текстовіФайлиToolStripMenuItem.Name = "текстовіФайлиToolStripMenuItem";
+            this.текстовіФайлиToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.текстовіФайлиToolStripMenuItem.Text = "Текстові файли";
+            // 
+            // зберегтиToolStripMenuItem1
+            // 
+            this.зберегтиToolStripMenuItem1.Name = "зберегтиToolStripMenuItem1";
+            this.зберегтиToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.зберегтиToolStripMenuItem1.Text = "Зберегти";
+            this.зберегтиToolStripMenuItem1.Click += new System.EventHandler(this.зберегтиToolStripMenuItem1_Click);
+            // 
+            // зберегтиЯкToolStripMenuItem1
+            // 
+            this.зберегтиЯкToolStripMenuItem1.Name = "зберегтиЯкToolStripMenuItem1";
+            this.зберегтиЯкToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.зберегтиЯкToolStripMenuItem1.Text = "Зберегти як";
+            this.зберегтиЯкToolStripMenuItem1.Click += new System.EventHandler(this.зберегтиЯкToolStripMenuItem1_Click);
             // 
             // довідкаToolStripMenuItem
             // 
@@ -271,7 +301,7 @@ namespace Naigebaver_IKM610B_Course_project
             // 
             // bSearch
             // 
-            this.bSearch.Location = new System.Drawing.Point(570, 147);
+            this.bSearch.Location = new System.Drawing.Point(646, 69);
             this.bSearch.Name = "bSearch";
             this.bSearch.Size = new System.Drawing.Size(94, 29);
             this.bSearch.TabIndex = 5;
@@ -281,7 +311,7 @@ namespace Naigebaver_IKM610B_Course_project
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(512, 205);
+            this.tbSearch.Location = new System.Drawing.Point(585, 120);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(218, 27);
             this.tbSearch.TabIndex = 6;
@@ -314,6 +344,7 @@ namespace Naigebaver_IKM610B_Course_project
             // tabPage2
             // 
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tabPage2.Controls.Add(this.richTextBox1);
             this.tabPage2.Controls.Add(this.dgwOpen);
             this.tabPage2.Controls.Add(this.bSearch);
             this.tabPage2.Controls.Add(this.tbSearch);
@@ -426,51 +457,14 @@ namespace Naigebaver_IKM610B_Course_project
             this.Push.UseVisualStyleBackColor = true;
             this.Push.Click += new System.EventHandler(this.Push_Click);
             // 
-            // statusStrip1
+            // LabelQueue
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 467);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1084, 22);
-            this.statusStrip1.TabIndex = 8;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // Enqueue
-            // 
-            this.Enqueue.Location = new System.Drawing.Point(31, 188);
-            this.Enqueue.Name = "Enqueue";
-            this.Enqueue.Size = new System.Drawing.Size(128, 41);
-            this.Enqueue.TabIndex = 0;
-            this.Enqueue.Text = "Enqueue";
-            this.Enqueue.UseVisualStyleBackColor = true;
-            this.Enqueue.Click += new System.EventHandler(this.Enqueue_Click);
-            // 
-            // Dequeue
-            // 
-            this.Dequeue.Location = new System.Drawing.Point(219, 188);
-            this.Dequeue.Name = "Dequeue";
-            this.Dequeue.Size = new System.Drawing.Size(124, 40);
-            this.Dequeue.TabIndex = 1;
-            this.Dequeue.Text = "Dequeue";
-            this.Dequeue.UseVisualStyleBackColor = true;
-            this.Dequeue.Click += new System.EventHandler(this.Dequeue_Click);
-            // 
-            // Peek_q
-            // 
-            this.Peek_q.Location = new System.Drawing.Point(390, 190);
-            this.Peek_q.Name = "Peek_q";
-            this.Peek_q.Size = new System.Drawing.Size(125, 40);
-            this.Peek_q.TabIndex = 2;
-            this.Peek_q.Text = "Peek_q";
-            this.Peek_q.UseVisualStyleBackColor = true;
-            this.Peek_q.Click += new System.EventHandler(this.Peek_q_Click);
-            // 
-            // Queuetb
-            // 
-            this.Queuetb.Location = new System.Drawing.Point(199, 127);
-            this.Queuetb.Name = "Queuetb";
-            this.Queuetb.Size = new System.Drawing.Size(166, 27);
-            this.Queuetb.TabIndex = 3;
+            this.LabelQueue.AutoSize = true;
+            this.LabelQueue.Location = new System.Drawing.Point(249, 327);
+            this.LabelQueue.Name = "LabelQueue";
+            this.LabelQueue.Size = new System.Drawing.Size(88, 20);
+            this.LabelQueue.TabIndex = 5;
+            this.LabelQueue.Text = "LabelQueue";
             // 
             // Черга
             // 
@@ -482,14 +476,66 @@ namespace Naigebaver_IKM610B_Course_project
             this.Черга.TabIndex = 4;
             this.Черга.Text = "Черга";
             // 
-            // LabelQueue
+            // Queuetb
             // 
-            this.LabelQueue.AutoSize = true;
-            this.LabelQueue.Location = new System.Drawing.Point(249, 327);
-            this.LabelQueue.Name = "LabelQueue";
-            this.LabelQueue.Size = new System.Drawing.Size(88, 20);
-            this.LabelQueue.TabIndex = 5;
-            this.LabelQueue.Text = "LabelQueue";
+            this.Queuetb.Location = new System.Drawing.Point(199, 127);
+            this.Queuetb.Name = "Queuetb";
+            this.Queuetb.Size = new System.Drawing.Size(166, 27);
+            this.Queuetb.TabIndex = 3;
+            // 
+            // Peek_q
+            // 
+            this.Peek_q.Location = new System.Drawing.Point(390, 190);
+            this.Peek_q.Name = "Peek_q";
+            this.Peek_q.Size = new System.Drawing.Size(125, 40);
+            this.Peek_q.TabIndex = 2;
+            this.Peek_q.Text = "Peek_q";
+            this.Peek_q.UseVisualStyleBackColor = true;
+            this.Peek_q.Click += new System.EventHandler(this.Peek_q_Click);
+            // 
+            // Dequeue
+            // 
+            this.Dequeue.Location = new System.Drawing.Point(219, 188);
+            this.Dequeue.Name = "Dequeue";
+            this.Dequeue.Size = new System.Drawing.Size(124, 40);
+            this.Dequeue.TabIndex = 1;
+            this.Dequeue.Text = "Dequeue";
+            this.Dequeue.UseVisualStyleBackColor = true;
+            this.Dequeue.Click += new System.EventHandler(this.Dequeue_Click);
+            // 
+            // Enqueue
+            // 
+            this.Enqueue.Location = new System.Drawing.Point(31, 188);
+            this.Enqueue.Name = "Enqueue";
+            this.Enqueue.Size = new System.Drawing.Size(128, 41);
+            this.Enqueue.TabIndex = 0;
+            this.Enqueue.Text = "Enqueue";
+            this.Enqueue.UseVisualStyleBackColor = true;
+            this.Enqueue.Click += new System.EventHandler(this.Enqueue_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 467);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1084, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(525, 197);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(495, 146);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
+            // 
+            // відкритиToolStripMenuItem1
+            // 
+            this.відкритиToolStripMenuItem1.Name = "відкритиToolStripMenuItem1";
+            this.відкритиToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.відкритиToolStripMenuItem1.Text = "Відкрити";
+            this.відкритиToolStripMenuItem1.Click += new System.EventHandler(this.відкритиToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -572,6 +618,11 @@ namespace Naigebaver_IKM610B_Course_project
         private System.Windows.Forms.Button Peek_q;
         private System.Windows.Forms.Button Dequeue;
         private System.Windows.Forms.Button Enqueue;
+        private System.Windows.Forms.ToolStripMenuItem текстовіФайлиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem зберегтиToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem зберегтиЯкToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem відкритиToolStripMenuItem1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
